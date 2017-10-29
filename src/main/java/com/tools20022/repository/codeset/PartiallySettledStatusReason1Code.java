@@ -1,0 +1,209 @@
+/* Tools20022 - API for ISO 20022
+* Copyright (C) 2017 Tools20022.com - László Bukodi 
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+package com.tools20022.repository.codeset;
+
+import com.tools20022.metamodel.MMCode;
+import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.repository.codeset.PartiallySettledStatusReasonCode;
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicReference;
+
+/**
+ * Specifies the reason for a partially settled status.
+ * <p>
+ * <strong>Constant fields:</strong>
+ * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode
+ * PartiallySettledStatusReasonCode}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#UnitsPartiallySettled
+ * PartiallySettledStatusReason1Code.UnitsPartiallySettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#CashPartiallySettled
+ * PartiallySettledStatusReason1Code.CashPartiallySettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#UnitsCashPartiallySettled
+ * PartiallySettledStatusReason1Code.UnitsCashPartiallySettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#HoldBackPendingAudit
+ * PartiallySettledStatusReason1Code.HoldBackPendingAudit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#HoldBackLiquidation
+ * PartiallySettledStatusReason1Code.HoldBackLiquidation}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
+ * dataDictionary} =
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
+ * example} =
+ * <ul>
+ * <li>"UPST"</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "PartiallySettledStatusReason1Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the reason for a partially settled status."</li>
+ * </ul>
+ */
+public class PartiallySettledStatusReason1Code extends PartiallySettledStatusReasonCode {
+
+	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code
+	 * PartiallySettledStatusReason1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnitsPartiallySettled"</li>
+	 * </ul>
+	 */
+	public static final MMCode UnitsPartiallySettled = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "UnitsPartiallySettled";
+			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code
+	 * PartiallySettledStatusReason1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashPartiallySettled"</li>
+	 * </ul>
+	 */
+	public static final MMCode CashPartiallySettled = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashPartiallySettled";
+			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code
+	 * PartiallySettledStatusReason1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UnitsCashPartiallySettled"</li>
+	 * </ul>
+	 */
+	public static final MMCode UnitsCashPartiallySettled = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "UnitsCashPartiallySettled";
+			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code
+	 * PartiallySettledStatusReason1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "HoldBackPendingAudit"</li>
+	 * </ul>
+	 */
+	public static final MMCode HoldBackPendingAudit = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "HoldBackPendingAudit";
+			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code
+	 * PartiallySettledStatusReason1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "HoldBackLiquidation"</li>
+	 * </ul>
+	 */
+	public static final MMCode HoldBackLiquidation = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "HoldBackLiquidation";
+			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+		}
+	};
+
+	static public MMCodeSet mmObject() {
+		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
+			{
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				example = Arrays.asList("UPST");
+				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				name = "PartiallySettledStatusReason1Code";
+				definition = "Specifies the reason for a partially settled status.";
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.UnitsPartiallySettled, com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.CashPartiallySettled,
+						com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.UnitsCashPartiallySettled, com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.HoldBackPendingAudit,
+						com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.HoldBackLiquidation);
+				trace_lazy = () -> PartiallySettledStatusReasonCode.mmObject();
+			}
+		});
+		return mmObject_lazy.get();
+	}
+}

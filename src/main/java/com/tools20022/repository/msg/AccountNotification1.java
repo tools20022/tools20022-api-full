@@ -1,0 +1,617 @@
+/* Tools20022 - API for ISO 20022
+* Copyright (C) 2017 Tools20022.com - László Bukodi 
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+package com.tools20022.repository.msg;
+
+import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.repository.codeset.CopyDuplicate1Code;
+import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.datatype.Max500Text;
+import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.CashBalance;
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicReference;
+
+/**
+ * Set of elements providing further details on the account notification.
+ * <p>
+ * <strong>Constant fields:</strong>
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
+ * messageElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification1#Identification
+ * AccountNotification1.Identification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification1#ElectronicSequenceNumber
+ * AccountNotification1.ElectronicSequenceNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification1#LegalSequenceNumber
+ * AccountNotification1.LegalSequenceNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification1#CreationDateTime
+ * AccountNotification1.CreationDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification1#FromToDate
+ * AccountNotification1.FromToDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification1#CopyDuplicateIndicator
+ * AccountNotification1.CopyDuplicateIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountNotification1#Account
+ * AccountNotification1.Account}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification1#RelatedAccount
+ * AccountNotification1.RelatedAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification1#TransactionsSummary
+ * AccountNotification1.TransactionsSummary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountNotification1#Entry
+ * AccountNotification1.Entry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountNotification1#AdditionalNotificationInformation
+ * AccountNotification1.AdditionalNotificationInformation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.CashBalance
+ * CashBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV01#Notification
+ * BankToCustomerDebitCreditNotificationV01.Notification}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
+ * dataDictionary} =
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "AccountNotification1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Set of elements providing further details on the account notification."</li>
+ * </ul>
+ */
+public class AccountNotification1 {
+
+	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	/**
+	 * Unique and unambiguous identification of the account report, assigned by
+	 * the account servicer.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
+	 * Max35Text}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "Id"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Identification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unique and unambiguous identification of the account report, assigned by the account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			isDerived = false;
+			xmlTag = "Id";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Identification";
+			definition = "Unique and unambiguous identification of the account report, assigned by the account servicer.";
+			minOccurs = 1;
+			maxOccurs = 1;
+			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+	};
+	/**
+	 * Sequential number of the report, assigned by the account servicer. It is
+	 * increased incrementally for each report sent electronically.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
+	 * Number}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "ElctrncSeqNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ElectronicSequenceNumber"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Sequential number of the report, assigned by the account servicer. It is increased incrementally for each report sent electronically."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute ElectronicSequenceNumber = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			isDerived = false;
+			xmlTag = "ElctrncSeqNb";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ElectronicSequenceNumber";
+			definition = "Sequential number of the report, assigned by the account servicer. It is increased incrementally for each report sent electronically.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			simpleType_lazy = () -> Number.mmObject();
+		}
+	};
+	/**
+	 * Legal sequential number of the report, assigned by the account servicer.
+	 * It is increased incrementally for each report sent.
+	 * 
+	 * Usage : in those scenarios where eg a paper statement is a legal
+	 * requirement, the paper statement may have a different numbering than the
+	 * electronic sequential number. Paper statements can for instance only be
+	 * sent if movement on the account has taken place, whereas electronic
+	 * statements can be sent eg each day, regardless of whether movements have
+	 * taken place or not.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
+	 * Number}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "LglSeqNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LegalSequenceNumber"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Legal sequential number of the report, assigned by the account servicer. It is increased incrementally for each report sent.\n\nUsage : in those scenarios where eg a paper statement is a legal requirement, the paper statement may have a different numbering than the electronic sequential number. Paper statements can for instance only be sent if movement on the account has taken place, whereas electronic statements can be sent eg each day, regardless of whether movements have taken place or not."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute LegalSequenceNumber = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			isDerived = false;
+			xmlTag = "LglSeqNb";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LegalSequenceNumber";
+			definition = "Legal sequential number of the report, assigned by the account servicer. It is increased incrementally for each report sent.\n\nUsage : in those scenarios where eg a paper statement is a legal requirement, the paper statement may have a different numbering than the electronic sequential number. Paper statements can for instance only be sent if movement on the account has taken place, whereas electronic statements can be sent eg each day, regardless of whether movements have taken place or not.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			simpleType_lazy = () -> Number.mmObject();
+		}
+	};
+	/**
+	 * Date and time at which the report was created.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
+	 * ISODateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "CreDtTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreationDateTime"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Date and time at which the report was created."</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			isDerived = false;
+			xmlTag = "CreDtTm";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CreationDateTime";
+			definition = "Date and time at which the report was created.";
+			minOccurs = 1;
+			maxOccurs = 1;
+			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+	};
+	/**
+	 * Range of time between the start date and the end date for which the
+	 * account notification is issued.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.msg.DateTimePeriodDetails
+	 * DateTimePeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Account#ReportedPeriod
+	 * Account.ReportedPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "FrToDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FromToDate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Range of time between the start date and the end date for which the account notification is issued."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd FromToDate = new MMMessageAssociationEnd() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.ReportedPeriod;
+			isDerived = false;
+			xmlTag = "FrToDt";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FromToDate";
+			definition = "Range of time between the start date and the end date for which the account notification is issued.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			type_lazy = () -> DateTimePeriodDetails.mmObject();
+			isComposite = true;
+		}
+	};
+	/**
+	 * Specifies if this document is a copy, a duplicate, or a duplicate of a
+	 * copy.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.codeset.CopyDuplicate1Code
+	 * CopyDuplicate1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "CpyDplctInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CopyDuplicateIndicator"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Specifies if this document is a copy, a duplicate, or a duplicate of a copy."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute CopyDuplicateIndicator = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			isDerived = false;
+			xmlTag = "CpyDplctInd";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CopyDuplicateIndicator";
+			definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+	};
+	/**
+	 * Business relationship between two entities; one entity is the account
+	 * owner, the other entity is the account servicer.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.msg.CashAccount13
+	 * CashAccount13}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#CashAccount
+	 * CashBalance.CashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "Acct"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Account"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CashAccount;
+			isDerived = false;
+			xmlTag = "Acct";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Account";
+			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
+			minOccurs = 1;
+			maxOccurs = 1;
+			type_lazy = () -> CashAccount13.mmObject();
+			isComposite = true;
+		}
+	};
+	/**
+	 * Identifies the parent account of the reported account.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.msg.CashAccount7
+	 * CashAccount7}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#CashAccount
+	 * CashBalance.CashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "RltdAcct"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RelatedAccount"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Identifies the parent account of the reported account."</li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd RelatedAccount = new MMMessageAssociationEnd() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CashAccount;
+			isDerived = false;
+			xmlTag = "RltdAcct";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RelatedAccount";
+			definition = "Identifies the parent account of the reported account.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			type_lazy = () -> CashAccount7.mmObject();
+			isComposite = true;
+		}
+	};
+	/**
+	 * Set of element providing summary information on entries.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.msg.TotalTransactions1
+	 * TotalTransactions1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "TxsSummry"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransactionsSummary"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Set of element providing summary information on entries."</li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd TransactionsSummary = new MMMessageAssociationEnd() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			isDerived = false;
+			xmlTag = "TxsSummry";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TransactionsSummary";
+			definition = "Set of element providing summary information on entries.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			type_lazy = () -> TotalTransactions1.mmObject();
+			isComposite = true;
+		}
+	};
+	/**
+	 * Specifies the elements of an entry in the report.
+	 * 
+	 * Usage: At least one reference must be provided to identify the entry and
+	 * its underlying transaction(s).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.msg.NotificationEntry1
+	 * NotificationEntry1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#CashBalanceEntry
+	 * CashBalance.CashBalanceEntry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "Ntry"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Entry"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Specifies the elements of an entry in the report.\n\nUsage: At least one reference must be provided to identify the entry and its underlying transaction(s)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd Entry = new MMMessageAssociationEnd() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.CashBalanceEntry;
+			isDerived = false;
+			xmlTag = "Ntry";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Entry";
+			definition = "Specifies the elements of an entry in the report.\n\nUsage: At least one reference must be provided to identify the entry and its underlying transaction(s).";
+			minOccurs = 0;
+			type_lazy = () -> NotificationEntry1.mmObject();
+			isComposite = true;
+		}
+	};
+	/**
+	 * Further details on the account notification.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max500Text
+	 * Max500Text}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification1
+	 * AccountNotification1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "AddtlNtfctnInf"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalNotificationInformation"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Further details on the account notification."</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute AdditionalNotificationInformation = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> AccountNotification1.mmObject();
+			isDerived = false;
+			xmlTag = "AddtlNtfctnInf";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalNotificationInformation";
+			definition = "Further details on the account notification.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+	};
+
+	final static public MMMessageComponent mmObject() {
+		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
+			{
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification1.Identification, com.tools20022.repository.msg.AccountNotification1.ElectronicSequenceNumber,
+						com.tools20022.repository.msg.AccountNotification1.LegalSequenceNumber, com.tools20022.repository.msg.AccountNotification1.CreationDateTime, com.tools20022.repository.msg.AccountNotification1.FromToDate,
+						com.tools20022.repository.msg.AccountNotification1.CopyDuplicateIndicator, com.tools20022.repository.msg.AccountNotification1.Account, com.tools20022.repository.msg.AccountNotification1.RelatedAccount,
+						com.tools20022.repository.msg.AccountNotification1.TransactionsSummary, com.tools20022.repository.msg.AccountNotification1.Entry, com.tools20022.repository.msg.AccountNotification1.AdditionalNotificationInformation);
+				trace_lazy = () -> CashBalance.mmObject();
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV01.Notification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				name = "AccountNotification1";
+				definition = "Set of elements providing further details on the account notification.";
+			}
+		});
+		return mmObject_lazy.get();
+	}
+}

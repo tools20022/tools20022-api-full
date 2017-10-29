@@ -1,0 +1,89 @@
+/* Tools20022 - API for ISO 20022
+* Copyright (C) 2017 Tools20022.com - László Bukodi 
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+package com.tools20022.repository.area;
+
+import com.tools20022.metamodel.MMBusinessArea;
+import com.tools20022.repository.area.pacs.*;
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicReference;
+
+/**
+ * Messages that support the clearing and settlement processes for payment
+ * transactions between financial institutions
+ * <p>
+ * <strong>Constant fields:</strong>
+ * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
+ * "pacs"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getMessageDefinition
+ * messageDefinition} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05
+ * FinancialInstitutionCreditTransferV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05
+ * FIToFICustomerCreditTransferV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV06
+ * FIToFICustomerDirectDebitV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07
+ * FIToFIPaymentStatusReportV07}</li>
+ * <li>{@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV06
+ * FIToFIPaymentReversalV06}</li>
+ * <li>{@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06
+ * PaymentReturnV06}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
+ * businessProcessCatalogue} =
+ * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
+ * GeneratedRepository.catalogue}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "Payments Clearing and Settlement - Previous version - master"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Messages that support the clearing and settlement processes for payment transactions between financial institutions"
+ * </li>
+ * </ul>
+ */
+public class PaymentsClearingandSettlementPreviousVersion {
+
+	final static private AtomicReference<MMBusinessArea> mmObject_lazy = new AtomicReference<>();
+
+	final static public MMBusinessArea mmObject() {
+		mmObject_lazy.compareAndSet(null, new MMBusinessArea() {
+			{
+				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.catalogue;
+				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				name = "Payments Clearing and Settlement - Previous version - master";
+				definition = "Messages that support the clearing and settlement processes for payment transactions between financial institutions";
+				messageDefinition_lazy = () -> Arrays.asList(FinancialInstitutionCreditTransferV05.mmObject(), FIToFICustomerCreditTransferV05.mmObject(), FIToFICustomerDirectDebitV06.mmObject(), FIToFIPaymentStatusReportV07.mmObject(),
+						FIToFIPaymentReversalV06.mmObject(), PaymentReturnV06.mmObject());
+				code = "pacs";
+			}
+		});
+		return mmObject_lazy.get();
+	}
+}

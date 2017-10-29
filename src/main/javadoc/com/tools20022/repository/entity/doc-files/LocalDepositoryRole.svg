@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="102px" preserveAspectRatio="none" style="width:1379px;height:102px;background:#000000;" version="1.1" viewBox="0 0 1379 102" width="1379px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="185" x="5" y="17.9951">... (skipping 12 lines) ...</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="199" x="5" y="34.292">class SecuritiesPartyRole</text><a target="_top" xlink:actuate="onRequest" xlink:href="../SecuritiesPartyRole.html" xlink:show="new" xlink:title="Specifies roles played by a party that are linked to the handling of securities but not related to a specific process." xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="208" x="209" y="34.292">../SecuritiesPartyRole.html</text><line style="stroke: #0000FF; stroke-width: 1.0;" x1="209" x2="417" y1="36.292" y2="36.292"/></a><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="81" x="422" y="34.292">#FEFEEE {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="10" x="5" y="50.5889">}</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="333" x="5" y="66.8857">DepositoryRole -up-|&gt; SecuritiesPartyRole</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="1372" x="5" y="83.1826">class DepositoryRole [[../DepositoryRole.html{Place where securities are deposited, that is company, bank or institution that holds and facilitates the exchange of securities.</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="10" y="99.4795"/><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="106" x="10" y="99.4795">Syntax Error?</text><!--
+@startuml
+
+hide empty members
+hide circle
+together {
+class Role [[../Role.html{Role of a party in an activity.}]] #FEFEEE {
++PartyRole <i>(PartyRoleCode)</i>
+}
+AssetPartyRole -up-|> Role
+class AssetPartyRole [[../AssetPartyRole.html{Specifies roles played by a party that are linked to the handling of assets but not related to a specific process.}]] #FEFEEE {
+}
+SecuritiesPartyRole -up-|> AssetPartyRole
+class SecuritiesPartyRole [[../SecuritiesPartyRole.html{Specifies roles played by a party that are linked to the handling of securities but not related to a specific process.}]] #FEFEEE {
+}
+DepositoryRole -up-|> SecuritiesPartyRole
+class DepositoryRole [[../DepositoryRole.html{Place where securities are deposited, that is company, bank or institution that holds and facilitates the exchange of securities.
+ 
+}]] #FEFEEE {
+}
+LocalDepositoryRole -up-|> DepositoryRole
+class LocalDepositoryRole [[../LocalDepositoryRole.html{Place where securities are deposited, that is company, bank or institution that holds and facilitates the exchange of securities at a local/national level.}]] #FEFECE {
+}
+}
+together {
+class RolePlayer [[../RolePlayer.html{Type of entity that plays a specific role in a specific context.}]] #EEEEEE {
+}
+class ContactPersonRole [[../ContactPersonRole.html{Person to be contacted in a given organisation. In the corporate action domain (including meeting notifications) , it is the contact person at the party organising the meeting, at the issuer or at an intermediary.}]] #EEEEEE {
+}
+ContactPersonRole -[hidden]-> RolePlayer
+class CounterpartyRisk [[../CounterpartyRisk.html{Calculation of the exposure amount that one party has vis-a-vis one counterparty or a central system, based on its credit risk.}]] #EEEEEE {
+}
+CounterpartyRisk -[hidden]-> ContactPersonRole
+class Entry [[../Entry.html{Posting to an account that results in an increase or decrease to a balance.}]] #EEEEEE {
+}
+Entry -[hidden]-> CounterpartyRisk
+}
+together {
+class Asset [[../Asset.html{Tangible items of value to a business.}]] #EEEEEE {
+}
+}
+together {
+class SecuritiesAccount [[../SecuritiesAccount.html{Account to or from which a securities entry is made.}]] #EEEEEE {
+}
+class CashAccount [[../CashAccount.html{Account to or from which a cash entry is made.}]] #EEEEEE {
+}
+CashAccount -[hidden]-> SecuritiesAccount
+class Security [[../Security.html{Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.}]] #EEEEEE {
+}
+Security -[hidden]-> CashAccount
+}
+together {
+}
+together {
+}
+Role - -> "*" RolePlayer : Player
+Role - -> "1" ContactPersonRole : ContactPersonRole
+Role - -> "0..1" CounterpartyRisk : CounterpartyRisk
+Role - -> "1" Entry : Entry
+AssetPartyRole - -> "*" Asset : Asset
+SecuritiesPartyRole - -> "*" SecuritiesAccount : SecuritiesAccount
+SecuritiesPartyRole - -> "*" CashAccount : CashAccount
+SecuritiesPartyRole - -> "*" Security : Security
+SecuritiesAccount - -> "*" Security : Security
+@enduml
+
+PlantUML version 1.2017.16(Sun Sep 03 12:53:37 CEST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_151-b12
+Operating System: Linux
+OS Version: 3.13.0-110-generic
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

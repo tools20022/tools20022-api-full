@@ -1,0 +1,274 @@
+/* Tools20022 - API for ISO 20022
+* Copyright (C) 2017 Tools20022.com - László Bukodi 
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+package com.tools20022.repository.msg;
+
+import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Liquidity;
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicReference;
+
+/**
+ * Ability of a financial instrument to be easily traded and converted to cash,
+ * at conditions that do not affect its price.
+ * <p>
+ * <strong>Constant fields:</strong>
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
+ * messageElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#Value
+ * Liquidity1.Value}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#NumberOfSecurities
+ * Liquidity1.NumberOfSecurities}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#Upper
+ * Liquidity1.Upper}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Liquidity1#Lower
+ * Liquidity1.Lower}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.Liquidity Liquidity}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
+ * dataDictionary} =
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "Liquidity1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Ability of a financial instrument to be easily traded and converted to cash, at conditions that do not affect its price."
+ * </li>
+ * </ul>
+ */
+public class Liquidity1 {
+
+	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	/**
+	 * Market value of the securities position for which liquidity details are
+	 * provided.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
+	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Liquidity#Value
+	 * Liquidity.Value}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} = {@linkplain com.tools20022.repository.msg.Liquidity1
+	 * Liquidity1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "Val"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Value"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Market value of the securities position for which liquidity details are provided."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> Liquidity1.mmObject();
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.Value;
+			isDerived = false;
+			xmlTag = "Val";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Value";
+			definition = "Market value of the securities position for which liquidity details are provided.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+	};
+	/**
+	 * Number of securities for which liquidity range details are provided.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
+	 * DecimalNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} = {@linkplain com.tools20022.repository.msg.Liquidity1
+	 * Liquidity1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "NbOfScties"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NumberOfSecurities"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Number of securities for which liquidity range details are provided."</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute NumberOfSecurities = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> Liquidity1.mmObject();
+			isDerived = false;
+			xmlTag = "NbOfScties";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NumberOfSecurities";
+			definition = "Number of securities for which liquidity range details are provided.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+	};
+	/**
+	 * Upper liquidity indicator, represented as a percentage of the average
+	 * trade daily volume.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
+	 * PercentageRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Liquidity#Upper
+	 * Liquidity.Upper}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} = {@linkplain com.tools20022.repository.msg.Liquidity1
+	 * Liquidity1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "Upper"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Upper"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Upper liquidity indicator, represented as a percentage of the average trade daily volume."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute Upper = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> Liquidity1.mmObject();
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.Upper;
+			isDerived = false;
+			xmlTag = "Upper";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Upper";
+			definition = "Upper liquidity indicator, represented as a percentage of the average trade daily volume.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+	};
+	/**
+	 * Lower liquidity indicator, represented as a percentage of the average
+	 * trade daily volume.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
+	 * PercentageRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Liquidity#Lower
+	 * Liquidity.Lower}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} = {@linkplain com.tools20022.repository.msg.Liquidity1
+	 * Liquidity1}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "Lwr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Lower"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Lower liquidity indicator, represented as a percentage of the average trade daily volume."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute Lower = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> Liquidity1.mmObject();
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.Lower;
+			isDerived = false;
+			xmlTag = "Lwr";
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Lower";
+			definition = "Lower liquidity indicator, represented as a percentage of the average trade daily volume.";
+			minOccurs = 0;
+			maxOccurs = 1;
+			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+	};
+
+	final static public MMMessageComponent mmObject() {
+		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
+			{
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Liquidity1.Value, com.tools20022.repository.msg.Liquidity1.NumberOfSecurities, com.tools20022.repository.msg.Liquidity1.Upper,
+						com.tools20022.repository.msg.Liquidity1.Lower);
+				trace_lazy = () -> Liquidity.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				name = "Liquidity1";
+				definition = "Ability of a financial instrument to be easily traded and converted to cash, at conditions that do not affect its price.";
+			}
+		});
+		return mmObject_lazy.get();
+	}
+}

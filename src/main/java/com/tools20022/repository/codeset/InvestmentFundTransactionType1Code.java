@@ -1,0 +1,652 @@
+/* Tools20022 - API for ISO 20022
+* Copyright (C) 2017 Tools20022.com - László Bukodi 
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+package com.tools20022.repository.codeset;
+
+import com.tools20022.metamodel.MMCode;
+import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.repository.codeset.InvestmentFundTransactionTypeCode;
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicReference;
+
+/**
+ * Specifies the type of transaction.
+ * <p>
+ * <strong>Constant fields:</strong>
+ * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionTypeCode
+ * InvestmentFundTransactionTypeCode}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#All
+ * InvestmentFundTransactionType1Code.All}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#SecuritiesSale
+ * InvestmentFundTransactionType1Code.SecuritiesSale}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#SecuritiesPurchase
+ * InvestmentFundTransactionType1Code.SecuritiesPurchase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#SwitchOut
+ * InvestmentFundTransactionType1Code.SwitchOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#TransferIn
+ * InvestmentFundTransactionType1Code.TransferIn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#TransferOut
+ * InvestmentFundTransactionType1Code.TransferOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#Subscription
+ * InvestmentFundTransactionType1Code.Subscription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#Redemption
+ * InvestmentFundTransactionType1Code.Redemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#CashDeposit
+ * InvestmentFundTransactionType1Code.CashDeposit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#CashWithdrawal
+ * InvestmentFundTransactionType1Code.CashWithdrawal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#DividendPayment
+ * InvestmentFundTransactionType1Code.DividendPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#CorporationActionEvent
+ * InvestmentFundTransactionType1Code.CorporationActionEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#CrossIn
+ * InvestmentFundTransactionType1Code.CrossIn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#CrossOut
+ * InvestmentFundTransactionType1Code.CrossOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#Dividend
+ * InvestmentFundTransactionType1Code.Dividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#InSpecie
+ * InvestmentFundTransactionType1Code.InSpecie}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#Other
+ * InvestmentFundTransactionType1Code.Other}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#RedemptionAssetAllocation
+ * InvestmentFundTransactionType1Code.RedemptionAssetAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#RedemptionWithdrawingPlan
+ * InvestmentFundTransactionType1Code.RedemptionWithdrawingPlan}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#ReinvestmentOfDividend
+ * InvestmentFundTransactionType1Code.ReinvestmentOfDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#SubscriptionSavingsPlan
+ * InvestmentFundTransactionType1Code.SubscriptionSavingsPlan}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#SubscriptionAssetAllocation
+ * InvestmentFundTransactionType1Code.SubscriptionAssetAllocation}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
+ * dataDictionary} =
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "InvestmentFundTransactionType1Code"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} = "Specifies the type of transaction."</li>
+ * </ul>
+ */
+public class InvestmentFundTransactionType1Code extends InvestmentFundTransactionTypeCode {
+
+	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "All"</li>
+	 * </ul>
+	 */
+	public static final MMCode All = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "All";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesSale"</li>
+	 * </ul>
+	 */
+	public static final MMCode SecuritiesSale = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesSale";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesPurchase"</li>
+	 * </ul>
+	 */
+	public static final MMCode SecuritiesPurchase = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesPurchase";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SwitchOut"</li>
+	 * </ul>
+	 */
+	public static final MMCode SwitchOut = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SwitchOut";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransferIn"</li>
+	 * </ul>
+	 */
+	public static final MMCode TransferIn = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TransferIn";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TransferOut"</li>
+	 * </ul>
+	 */
+	public static final MMCode TransferOut = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TransferOut";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Subscription"</li>
+	 * </ul>
+	 */
+	public static final MMCode Subscription = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Subscription";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Redemption"</li>
+	 * </ul>
+	 */
+	public static final MMCode Redemption = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Redemption";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashDeposit"</li>
+	 * </ul>
+	 */
+	public static final MMCode CashDeposit = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashDeposit";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashWithdrawal"</li>
+	 * </ul>
+	 */
+	public static final MMCode CashWithdrawal = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashWithdrawal";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DividendPayment"</li>
+	 * </ul>
+	 */
+	public static final MMCode DividendPayment = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DividendPayment";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CorporationActionEvent"</li>
+	 * </ul>
+	 */
+	public static final MMCode CorporationActionEvent = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CorporationActionEvent";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CrossIn"</li>
+	 * </ul>
+	 */
+	public static final MMCode CrossIn = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CrossIn";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CrossOut"</li>
+	 * </ul>
+	 */
+	public static final MMCode CrossOut = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CrossOut";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Dividend"</li>
+	 * </ul>
+	 */
+	public static final MMCode Dividend = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Dividend";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InSpecie"</li>
+	 * </ul>
+	 */
+	public static final MMCode InSpecie = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InSpecie";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Other"</li>
+	 * </ul>
+	 */
+	public static final MMCode Other = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Other";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RedemptionAssetAllocation"</li>
+	 * </ul>
+	 */
+	public static final MMCode RedemptionAssetAllocation = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RedemptionAssetAllocation";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RedemptionWithdrawingPlan"</li>
+	 * </ul>
+	 */
+	public static final MMCode RedemptionWithdrawingPlan = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RedemptionWithdrawingPlan";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReinvestmentOfDividend"</li>
+	 * </ul>
+	 */
+	public static final MMCode ReinvestmentOfDividend = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReinvestmentOfDividend";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubscriptionSavingsPlan"</li>
+	 * </ul>
+	 */
+	public static final MMCode SubscriptionSavingsPlan = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SubscriptionSavingsPlan";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+	/**
+	 * (No doc)
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code
+	 * InvestmentFundTransactionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SubscriptionAssetAllocation"</li>
+	 * </ul>
+	 */
+	public static final MMCode SubscriptionAssetAllocation = new MMCode() {
+		{
+			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SubscriptionAssetAllocation";
+			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
+		}
+	};
+
+	static public MMCodeSet mmObject() {
+		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
+			{
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				name = "InvestmentFundTransactionType1Code";
+				definition = "Specifies the type of transaction.";
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.All, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.SecuritiesSale,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.SecuritiesPurchase, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.SwitchOut,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.TransferIn, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.TransferOut,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.Subscription, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.Redemption,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.CashDeposit, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.CashWithdrawal,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.DividendPayment, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.CorporationActionEvent,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.CrossIn, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.CrossOut,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.Dividend, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.InSpecie,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.Other, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.RedemptionAssetAllocation,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.RedemptionWithdrawingPlan, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.ReinvestmentOfDividend,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.SubscriptionSavingsPlan, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.SubscriptionAssetAllocation);
+				trace_lazy = () -> InvestmentFundTransactionTypeCode.mmObject();
+			}
+		});
+		return mmObject_lazy.get();
+	}
+}
