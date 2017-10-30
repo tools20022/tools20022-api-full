@@ -261,7 +261,7 @@ class ListBuilderForISOArchive_00 {
 		list.add((T) FIToFICustomerDirectDebitV02.mmObject());
 		list.add((T) FIToFICustomerDirectDebitV03.mmObject());
 		list.add((T) FIToFICustomerDirectDebitV04.mmObject());
-		list.add((T) PaymentCancellationRequestV01.mmObject());
+		list.add((T) com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.mmObject());
 		list.add((T) FIToFIPaymentCancellationRequestV01.mmObject());
 		list.add((T) FIToFIPaymentCancellationRequestV02.mmObject());
 		list.add((T) FIToFIPaymentCancellationRequestV03.mmObject());
@@ -269,7 +269,7 @@ class ListBuilderForISOArchive_00 {
 		list.add((T) FIToFIPaymentReversalV02.mmObject());
 		list.add((T) FIToFIPaymentReversalV03.mmObject());
 		list.add((T) FIToFIPaymentReversalV04.mmObject());
-		list.add((T) PaymentStatusReportV02.mmObject());
+		list.add((T) com.tools20022.repository.area.pacs.PaymentStatusReportV02.mmObject());
 		list.add((T) FIToFIPaymentStatusReportV03.mmObject());
 		list.add((T) FIToFIPaymentStatusReportV04.mmObject());
 		list.add((T) FIToFIPaymentStatusReportV05.mmObject());
